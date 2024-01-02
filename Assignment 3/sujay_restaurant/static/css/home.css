@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-row{
+    /* border: 1px solid gray; */
+    box-shadow: 5px 5px 20px gray;
+    
+}
+
+.first-col{
+    padding:50px ;
+}
+
+.my-color{
+    background-color: #fff5f2ff;
+    
+}

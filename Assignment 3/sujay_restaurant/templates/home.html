@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container p-5">
+    <div class="row gx-5 home-row">
+      <div class="col-lg-6 my-color">
+        <div class="first-col">
+          <span><h1>Meet, Eat &amp; Enjoy</h1> <h1>the true test</h1></span>
+          <p>Making reservation at Delicious restaurant is easy and takes just a couple of minutes.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="#">
+          <img src="{% static 'images/catering.jpg' %}" class="img-fluid m-0 p-0" alt="Restaurant Image" />
+        </div>
+      </div>
+      {{ block.super }}
+    </div>
+  </div>
+{% endblock %}

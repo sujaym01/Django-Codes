@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container">
+    <div class="img-container">
+      <img src="{% static 'images/room.jpg' %}" class="img-fluid" alt="" />
+    </div>
+    <div>
+      <h1 class="text-center text-bg-primary">Welcome to MUMPI'S RESTAURANT</h1>
+      <h4>Crafting Culinary Experiences, One Plate at a Time</h4>
+      <p>Welcome to MUMPI'S RESTAURANT, where passion meets palate. We're not just a restaurant; we're a celebration of flavors, a haven for food lovers, and a culmination of a dream turned into reality.</p>
+    </div>
+    <div>
+      <h4>Our Story</h4>
+      <p>MUMPI'S RESTAURANT began with a simple idea: to create a space where people could savor exceptional food in an ambiance that feels like home. Founded in 2020 by Sujay, our journey started in a small kitchen with a big dream. Today, we stand proud as a culinary destination that brings people together through the love of good food.</p>
+    </div>
+    <div>
+      <h4>Our Vision</h4>
+      <p>At MUMPI'S RESTAURANT, we envision more than just a dining experience; we aim to be the heartbeat of gastronomic delight in our community. Every dish is a chapter in our story, and every customer is a cherished part of our narrative.</p>
+    </div>
+    <div>
+      <h4>Our Team</h4>
+      <p>Meet the faces behind the magic. Our team is a family of chefs, servers, and creatives, each contributing their unique skills and passion to create an atmosphere that goes beyond just a meal. Together, we strive for excellence and innovation in every aspect of your dining experience.</p>
+    </div>
+    <div>
+      <h4>Sustainability</h4>
+      <p>We care about the planet as much as we care about your taste buds. MUMPI'S RESTAURANT is committed to sustainability - from supporting local farmers to minimizing waste. It's our way of giving back to the environment that inspires our culinary creations.</p>
+    </div>
+    <div>
+      <h4>Community Involvement</h4>
+      <p>Being a part of the Khulna City community is an honor. We actively participate in local events, support charitable initiatives, and collaborate with fellow businesses to contribute to the vibrant tapestry of our city.</p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>Your feedback matters. Whether you want to share your dining experience or have a special request, we're here for you_</p>
+      <p>
+        Reach out to us at <span class="text-info">Email : sujay.m6160@gmail.com</span>
+      </p>
+    </div>
+    <div>
+      <h4>Visit Us</h4>
+      <p>Discover the charm of MUMPI'S RESTAURANT at Daulatpur,Khulna. We're open all Days of the Week from 10am to 11pm. Make a reservation or drop by for a spontaneous feast.</p>
+    </div>
+    <div>
+      <p>Thank you for choosing MUMPI'S RESTAURANT. We look forward to exceeding your culinary expectations and creating lasting memories with each visit.</p>
+    </div>
+    {{ block.super }}
+  </div>
+{% endblock %}
