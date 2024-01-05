@@ -1,7 +1,6 @@
 from django.shortcuts import render
 # python  class name import 
-from . forms import contactForm,StudentData,PasswordValidationProject
-
+from . forms import contactForm, StudentData, PasswordValidationProject
 # Create your views here.
 def home(request):
     return render(request, "./first_app/home.html")
