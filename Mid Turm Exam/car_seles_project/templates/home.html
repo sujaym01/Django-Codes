@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container">
+    <div class="row shadow-lg p-3 my-5 bg-body rounded">
+      <div class="col-sm-6">
+        <h1 class="fw-bolder">Welcome to Car Mat</h1>
+        <p class="text-info">Bangladesh Biggest Automotive Marketplace Banglavehicle.</p>
+        <p>com is going to be Bangladesh's No.1 Automotive Portal.Regular car and bike prices are updated on Banglavehicle. Car and bike every update comes first on Banglavehicle. Keeps Bangladesh is up to date with the latest in the automotive industry of Bangladesh and the world through the blog.</p>
+      </div>
+      <div class="col-sm-6">
+        <img class="px-4 w-100 h-100" src="{% static 'header2.jpg' %}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 shadow-lg p-3 mb-5 bg-body rounded">
+        <h2 class="fw-bolder">Search New Car And Bike By Brand</h2>
+      </div>
+    </div>
+
+    <div class="row shadow-lg p-3 mb-5 bg-body rounded">
+      {% for cat in category %}
+        <div class="col-sm-3">
+          <div class="text-center bg-info rounded-pill">
+            <a href="{% url 'category_wise_car' cat.slug %}"class="text-decoration-none fw-bolder">
+               {{ cat.name }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+      
+    <div class="row">
+      <div class="col-sm-12 shadow-lg p-3 mb-5 bg-body rounded">
+        <h4 class="fw-bolder">Total Car Quantity : {{ data|length }}</h4>
+      </div>
+    </div>
+      
+    <div class="row mb-5">
+      {% for car in data %}
+        <div class="col-sm-3">
+          <div class="card m-2 text-center shadow-lg">
+            <div class="card-body">
+              <img src="{{ car.image.url }}" class="card-img-top" alt="{{ car.name }}" />
+              <h5 class="card-title fw-bolder">{{ car.name }}</h5>
+              <p class="card-text fw-lighter">Price: ৳{{ car.price }}</p>
+              <h5 class="fw-light">Brand: {{ car.brand.name }}</h5>
+              <a href="{% url 'detail_car' car.id %}" class="btn btn-outline-danger mt-3">View Details</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock  %}
+
